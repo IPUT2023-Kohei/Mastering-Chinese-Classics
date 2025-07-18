@@ -1,0 +1,310 @@
+body {
+    margin: top;
+    background-image: url("../img/ホワイトボード.png");
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+    color: #000000;
+}
+
+.mochiy-pop-p-one-regular {
+    font-family: "Mochiy Pop P One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+p {
+    font-family: "Mochiy Pop P One", serif;
+    position: relative;
+    top: 145px;
+    left: 400px;
+    color: black;
+    font-size: 80px;
+    font-style: normal;
+    /*font-family: "メイリオ";*/
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.contents {
+    margin: auto;
+}
+
+#startButton {
+    margin-top: 450px; 
+    font-size: 40px; 
+    margin-right: 620px;
+}
+
+.button {
+    display: inline-block; /* ボタンを横並びにする */
+    border: none; /* 枠線をなくす */
+    border-radius: 15px; /* 角丸をつける */
+    padding: 10px 25px; /* ボタンの内側の余白 */
+    margin: 20px; /* ボタン同士の余白 */
+    background-color: #000000; /* ボタンの背景色 */
+    color: white; /* ボタンの文字色 */
+    text-align: center; /* ボタンのテキストを中央揃えにする */
+    text-decoration: none; /* テキストに下線をつけない */
+    cursor: pointer; /* マウスポインタを変更する */
+    min-width: 200px;
+    border: 4px solid #FFFFFF;
+}
+
+.button:hover {
+    background-color: rgb(78, 199, 247); /* ボタンの背景色 */
+    color: blue; /* ボタンの文字色 */
+    cursor: pointer; /* マウスポインタを変更する */
+}
+
+.cbutton {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    margin: 10px; /* ボタン間の隙間を設定 */
+}
+
+#tip {
+    text-align: center; /* テキストを中央揃え */
+    font-size: 40px; /* フォントサイズ */
+    position: relative; /* 位置を相対的に設定 */
+    display: flex;
+    /*font-family: "メイリオ";*/
+    margin-top: 100px;
+}
+
+#output, #output1, #output3, #pr {
+    font-weight: bold;
+}
+
+#output1_1, #output2, #pr1, #pr2, #pr3, #pr4 {
+    font-size: 35px;
+}
+
+#tips {
+    margin-top: 50px;
+    margin-right: 300px;
+}
+
+#set {
+    margin-top: 50px;
+    margin-right: -300px;
+}
+
+#setting, #tip, #nanido, #mondai, #wrong, #result {
+    display: none;
+}
+
+#hint_t {
+    /*font-family: "メイリオ";*/ 
+    font-size: 48px;
+    top: 45px;
+    left: 150px;
+}
+
+#p1{
+    font-size: 40px;
+    margin-top: -480px;
+    margin-left: 200px;
+}
+
+.nanido{
+    margin-top: 480px;
+    margin-left: -400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#teisyutuButton, #nextButton, #resultButton {
+    /*font-family: "メイリオ";*/
+    font-size: 30px;
+    margin-right: 80px;
+    margin-top: auto;
+}
+
+/* 簡単 */
+#easy{
+    font-size: 30px;
+    margin-left: 300px;
+    top: 28%;                   /* ０％：天井   １００％：床 */
+    left: 3%;                   /* ０％：左　１００％：右 */ 
+    font-family: serif;         /* 明朝体 */
+    color: black;
+    border-radius: 0%;          /* 枠線の半径 */
+    border-width: 0.5vw;        /* 枠線の太さ */
+    border-color: black;  /* 枠線の色 */
+    background-color: white;    /* 背景色 */
+}
+#easy:hover {
+    background-color: rgb(78, 199, 247); /* ボタンの背景色 */
+    color: blue; /* ボタンの文字色 */
+    cursor: pointer; /* マウスポインタを変更する */
+}
+
+/* 普通 */
+#normal{
+    font-size: 30px;
+    margin-left: 100px;
+    top: 28%;                   /* ０％：天井   １００％：床 */
+    left: 35.5%;                /* ０％：左　１００％：右 */
+    font-family: serif;         /* 明朝体 */
+    color: black;
+    border-radius: 0%;          /* 枠線の半径 */
+    border-width: 0.5vw;        /* 枠線の太さ */
+    border-color: black;     /* 枠線の色 */
+    background-color: white;    /* 背景色 */
+}
+#normal:hover {
+    background-color: rgb(78, 199, 247); /* ボタンの背景色 */
+    color: blue; /* ボタンの文字色 */
+    cursor: pointer; /* マウスポインタを変更する */
+}
+
+/* 難問 */
+#hard{
+    font-size: 30px;
+    margin-left: 100px;
+    top: 28%;                   /* ０％：天井   １００％：床 */
+    left: 68%;                  /* ０％：左　１００％：右 */
+    font-family: serif;         /* 明朝体 */
+    color: black;
+    border-radius: 0%;          /* 枠線の半径 */
+    border-width: 0.5vw;        /* 枠線の太さ */
+    border-color: black;        /* 枠線の色 */
+    background-color: white;    /* 背景色 */
+}
+#hard:hover {
+    background-color: rgb(78, 199, 247); /* ボタンの背景色 */
+    color: blue; /* ボタンの文字色 */
+    cursor: pointer; /* マウスポインタを変更する */
+}
+
+#title {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    text-align: center;
+    vertical-align: center;
+}
+
+#tryAgainButton {
+    /*font-family: "メイリオ";*/
+    font-size: 40px;
+    margin-right: 80px;
+    margin-top: auto;
+}
+
+#resultAnswer, #twrong {
+    font-family: "Mochiy Pop P One", serif;
+    /*font-family: "メイリオ";*/
+    font-size: 80px;
+    margin-right: 880px;
+    margin-top: auto;
+}
+
+#explain {
+    font-family: "Mochiy Pop P One", serif;
+    font-size: 40px;
+    margin-top: 300px;
+    margin-left: 230px;
+    white-space: pre-wrap; /* 改行をそのまま表示 */
+    padding-left: 20px; /* 左側に20pxのパディングを追加 */
+    /*font-family: "メイリオ";*/
+}
+
+.mondai {
+    margin: 0;
+    display: flex;
+}
+
+#count {
+    margin-left: 800px;
+    color: red;
+    font-weight: bold;
+}
+
+#score {
+    font-family: "Mochiy Pop P One", serif;
+    /*font-family: "メイリオ";*/
+    /*font-weight: bold;*/
+    font-size: 60px;
+    margin-top: 15px;
+    margin-left: 800px;
+}
+
+#answerList {
+    font-family: "Mochiy Pop P One", serif;
+    /*font-family: "メイリオ";*/
+    /*font-weight: bold;*/
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 165px;
+}
+
+.hint {
+    /*font-family: "メイリオ";*/
+    font-size: 48px;
+    margin-left: 400px;
+    margin-top: 300px;
+}
+
+#yes{
+    font-size: 30px;
+    margin-left: 30px;
+    top: 28%;                   /* ０％：天井   １００％：床 */
+    left: 3%;                   /* ０％：左　１００％：右 */ 
+    font-family: serif;         /* 明朝体 */
+    color: black;
+    border-radius: 0%;          /* 枠線の半径 */
+    border-width: 0.5vw;        /* 枠線の太さ */
+    border-color: black;  /* 枠線の色 */
+    background-color: white;    /* 背景色 */
+}
+#yes:hover {
+    background-color: rgb(78, 199, 247); /* ボタンの背景色 */
+    color: blue; /* ボタンの文字色 */
+    cursor: pointer; /* マウスポインタを変更する */
+}
+
+#no{
+    font-size: 30px;
+    margin-left: 30px;
+    top: 28%;                   /* ０％：天井   １００％：床 */
+    left: 3%;                   /* ０％：左　１００％：右 */ 
+    font-family: serif;         /* 明朝体 */
+    color: black;
+    border-radius: 0%;          /* 枠線の半径 */
+    border-width: 0.5vw;        /* 枠線の太さ */
+    border-color: black;  /* 枠線の色 */
+    background-color: white;    /* 背景色 */
+}
+#no:hover {
+    background-color: rgb(78, 199, 247); /* ボタンの背景色 */
+    color: blue; /* ボタンの文字色 */
+    cursor: pointer; /* マウスポインタを変更する */
+}
+
+#auto{
+    font-size: 30px;
+    margin-left: 30px;
+    top: 28%;                   /* ０％：天井   １００％：床 */
+    left: 3%;                   /* ０％：左　１００％：右 */ 
+    font-family: serif;         /* 明朝体 */
+    color: black;
+    border-radius: 0%;          /* 枠線の半径 */
+    border-width: 0.5vw;        /* 枠線の太さ */
+    border-color: black;  /* 枠線の色 */
+    background-color: white;    /* 背景色 */
+}
+#auto:hover {
+    background-color: rgb(78, 199, 247); /* ボタンの背景色 */
+    color: blue; /* ボタンの文字色 */
+    cursor: pointer; /* マウスポインタを変更する */
+}

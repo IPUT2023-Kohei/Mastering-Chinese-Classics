@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 返り点マスター</title>
+        <!--css-->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/jquery-ui.mini.css">
+        <!--js-->
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <script src="./js/jquery-ui.mini.js"></script>
+        <script src="./js/q_pattern.js"></script>
+        <script src="./js/main.js"></script>
+        <!--<script src="./js/q_test.js"></script>-->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+        </style>
+    </head> 
+    <body>
+        <!--タイトル画面-->
+        <div id="title">
+            <div style="display: flex; flex-flow: column; width: 50%;">
+                <p><b>返り点マスター</b></p>
+            </div>
+            <div class="contents" style="text-align:center;">
+                <input type="button" id="startButton" class="button" value="始め"></input>
+                <div style="display: flex; justify-content: center; margin-top: 10px;margin-right: 500px;">
+                    <input type="button" id="tips" class="cbutton" value="注意事項"></input>
+                    <input type="button" id="set" class="cbutton" value="設定"></input>
+                </div>
+            </div>
+        </div>
+        <!--設定画面-->
+        <div class="setting" style="display: none;">
+            <p id="hint_t">ヒントを設定してください</p>
+            <div class="hint">
+                <input type="button" id="yes" class="button" value="有"></input>
+                <input type="button" id="no" class="button" value="無"></input>
+                <input type="button" id="auto" class="button" value="おっとぉ"></input>
+                <div style="text-align: right;margin-right: 200px;">
+                    <input type="button" class="button" id="confirm" value="確定"></input> <!-- 確定ボタン -->
+                    <input type="button" class="button" id="return" value="戻る" onclick="location.href='./kanbun.html'"></input>
+                </div>
+            </div>
+        </div>
+        
+        <!--注意事項の画面-->
+        <div id="tip" style="display: none;">
+            <div>
+                <div class="notice" style="margin-top: 120px;">
+                    <div id="output"></div>
+                    <div id="output1"></div>
+                    <div id="output1.1"></div>
+                    <div id="output2"></div>
+                    <div id="output3"></div>
+                    <div id="pr"></div>
+                    <div id="pr1"></div>
+                    <div id="pr2"></div>
+                    <div id="pr3"></div>
+                    <div id="pr4"></div>
+                    <div style="text-align: right;margin-right: 80px;">
+                        <input type="button" class="button" id="return" value="戻る" onclick="location.href='./kanbun.html'"></input>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--難易度選択-->
+        <div class="nanido" style="display: none; font-family: メイリオ; font-size: 48px;">
+            <p id="p1">難易度を選択してください</p>
+            <input type="button" id="easy" class="button" value="簡単"></input>
+            <input type="button" id="normal" class="button" value="普通"></input>
+            <input type="button" id="hard" class="button" value="難問"></input>
+        </div>
+        <!--問題画面-->
+        <div id="mondai" style="display: none;">
+            <p id="problem" style="margin-top: 48px;font-size: 50px;"><b>読む順番に数字を入れ替えてください</b></p>
+            <ul id="sortable-list" style="font-size: 28px;margin-top: 150px;margin-right: 60px;"> 
+                <!--要素はここに追加されます-->
+            </ul>
+            <div style="text-align: right; margin-top: 50px; margin-right: 80px;">
+                <input type="button" id="teisyutuButton" class="button" value="提出"></input>
+                <input type="button" id="nextButton" class="button" value="次の問題" style="display: none;"></input>
+                <input type="button" id="hintButton" class="button" value="ヒント"></input>
+                <input type="button" id="resultButton" class="button" value="結果発表！！" style="display: none;"></input>
+            </div>
+        </div>
+        <!--解説画面-->
+        <div id="wrong" style="display: none;font-family: Mochiy Pop P One, serif;font-size: 48px;">
+            <p id="twrong">解説</p> <div id="count"></div>
+            <div id="explain"></div>
+        </div>
+        <!--結果画面-->
+        <div id="result" style="display: none;">
+            <div class="contents result">
+                <p id="resultAnswer">解答</p>
+                <div id="accuracyRate">
+                    <div id="score"></div>
+                </div>
+                <ul id="answerList"></ul> <!-- ユーザーの解答と正しい解答を表示するリスト -->
+            </div>
+            <div style="text-align: right;margin-right: 80px;">
+                <input type="button" class="button" id="tryAgainButton" value="再挑戦" onclick="location.href='./kanbun.html'"></input>
+            </div>
+        </div>
+    </body>
+</html>

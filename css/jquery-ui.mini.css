@@ -1,0 +1,43 @@
+/* 問題文 */
+#problem {
+    font-family: "メイリオ";
+    font-size: 38px;
+    margin-top: auto;
+}
+
+#sortable-list {
+    font-family: "Mochiy Pop P One", serif;
+    list-style-type: none; /* リストのスタイルを無効にする */
+    margin: 0;
+    padding: 0;
+    width: 300px; /* リストの幅 */
+    position: relative; /* 相対位置を設定 */
+    margin-top: 800px;
+    left: 50%; /* 左から50% */
+    transform: translateX(-50%); /* 中央に配置 */
+}
+
+.sortable-item, .non-sortable-item {
+    width: 150px; /* 幅を150pxに設定 */
+    height: 50px; /* 高さを50pxに設定 */
+    line-height: 50px; /* テキストを中央に配置 */
+    text-align: center; /* テキストを中央に配置 */
+    border: 1px solid #ccc; /* 枠線を追加 */
+    margin: 5px 0; /* 上下のマージンを追加 */
+    background-color: black; /* 背景色を設定 */
+    cursor: pointer;
+    color: white;
+    margin-top: 10px;
+}
+
+.sortable-item {
+    cursor: url("../img/照準.png"), auto;
+}
+
+.non-sortable-item {
+    cursor: default;
+}
+
+.sortable-item.selected {
+    background-color: #d3d3d3; /* 選択されたアイテムの背景色 */
+}
